@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+	"name": "naddon",
+	"version": "1.0",
+
+	"description": "Narens added functionalities",
+
+	"icons": {
+		"48": "icons/naddon.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": [ "*://*.duckduckgo.com/*" ],
+			"js": [ "naddon.js" ]
+		}
+	],
+
+	"commands": {
+		"shortCut": {
+			"suggested_key": {
+				"default": "Alt+G"
+			},
+			"description": "Trigger Action"
+		}
+	},
+
+	"permissions": [ "activeTab", "tabs", "webNavigation", "<all_urls>" ]
+}
